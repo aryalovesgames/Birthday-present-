@@ -62,10 +62,26 @@ body {
     max-width: 450px;
     border: 2px solid rgba(255, 255, 255, 0.08);
 }
+.quiz-heading {
+    background-color: #372636; 
+    border: 1px solid rgba(120, 6, 6, 0.4);
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: outset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
 h2 {
-    color: #ffffff;
-    margin-bottom: 30px;
+    color: #FA6B67;
     font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    
+}
+h3 {
+    color: #ffffff;
+    margin: 30px;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
