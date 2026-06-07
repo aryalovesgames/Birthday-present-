@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Truth Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <svg style="display: none;">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.7 0" />
+        </filter>
+    </svg>
+    <div class="container">
+        <h2>What level of idiot are you?</h2>
+        <div class="slider-wrapper">
+            <input type="range" id="idiot-scale" min="0" max="100" step="10" value="50">
+            <div class="slider-labels">
+                <span>0%</span>
+                <span>100%</span>
+            </div>
+        </div>
+        <div class="percentage-display">
+            Current Level: <span id="current-value">50%</span>
+        </div>
+        <button id="submit-btn">Submit</button>
+    </div>
+    <div id="reward-popup" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gift-icon">
+                    <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                    <rect x="2" y="7" width="20" height="5"></rect>
+                    <line x1="12" y1="22" x2="12" y2="7"></line>
+                    <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                    <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                </svg>
+            </div>
+
+            <h3>Correct! You admitted it!</h3>
+            <p>So here is your reward!<br>
+              Happy Birthday bro!!! <br>
+              Alright this would be a shitty way but nah, I don't care.
+              Well I don't know much shit about you but you read my poems and genuinely be there for me when I need someone,
+              you've been a really good fried over this time, so you're a true homie. <br>
+              Like bro go do something in your life man and don't fail maths especially. Lot lot wishes for youu!!! 
+            </p>
+            <button id="claim-btn" class="btn-claim">Claim Reward!</button>
+        </div>
+    </div>
+    <div id="qr-popup" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3>Here is your Reward!</h3>
+            
+            <div class="reward-media-container">
+                <img src="qr.png" alt="QR Code" class="qr-code-img">
+                <img src="giphy.gif" alt="Dancing Cat" class="dancing-cat-img">
+            </div>
+
+            <p style="margin-top: 15px; font-size: 0.9rem;">Scan the QR code to unlock your final birthday gift!</p>
+            
+            <button id="back-to-message-btn">← Go Back to Message</button>
+            <button id="close-qr-btn" class="btn-error" style="width: 100%;">Close</button>
+        </div>
+    </div>
+    <div id="error-popup" class="modal-overlay hidden">
+        <div class="modal-content error-border">
+            <h3>Incorrect Answer!</h3>
+            <p>Try being more honest with yourself.</p>
+            <button id="close-error-btn" class="btn-error" style="width: 100%;">Try again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
