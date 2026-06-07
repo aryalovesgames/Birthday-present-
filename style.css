@@ -79,10 +79,10 @@ h2 {
     letter-spacing: -0.5px;
     
 }
-h3 {
-    color: #ffffff;
+h3{
+    color: rgba(255, 255, 255, 0.7);
     margin: 30px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: -0.5px;
 }
 .slider-wrapper {
